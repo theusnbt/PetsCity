@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PetsCity
@@ -17,29 +10,41 @@ namespace PetsCity
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnCalculo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Negocio negocio = new Negocio();
 
-        }
+                negocio.NomePet = txtNomePet.Text;
+                negocio.PrecoServ = Convert.ToDouble(txtPrecoServico.Text);
+                negocio.Quantidade = int.Parse(txtQuantidade.Text);
+                negocio.IdadeAnimal = int.Parse(txtIdadeAnimal.Text);
 
-        private void lblpreco_Click(object sender, EventArgs e)
-        {
+                double desconto = negocio.CalcularDesconto();
+                double valorFinal = negocio.CalcularValorFinal();
+                double parcela = negocio.CalcularParcela();
+                bool brinde = negocio.ValidarBrinde();
 
-        }
+                lblNome.Text = $"{negocio.NomePet.ToUpper()}";
+                lblDesconto.Text = $"{desconto:N2}";
+                lblValorFinal.Text = $"{valorFinal:N2}";
+                lblParcela.Text = $"3x de R${parcela:N2}";
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+                txtNomePet.Clear();
+                txtPrecoServico.Clear();
+                txtQuantidade.Clear();
+                txtIdadeAnimal .Clear();
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblValorFinal_Click(object sender, EventArgs e)
-        {
-
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Preencha os campos corretamente",
+                                "Erro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                                );
+            }
         }
     }
 }

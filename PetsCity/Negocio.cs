@@ -30,6 +30,14 @@ namespace PetsCity
             double desconto = CalcularDesconto();
             return valorBruto = desconto;
         }
+        public double CalcularParcela()
+        {
+            return CalcularValorFinal() / 3;
+        }
+        public bool ValidarBrinde()
+        {
+            return (IdadeAnimal >= 18 && Quantidade >= 5 || CalcularValorFinal() > 100);
+        }
 
     }
 }

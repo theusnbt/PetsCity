@@ -80,7 +80,6 @@
             this.lblIdadeAnimal.Size = new System.Drawing.Size(68, 13);
             this.lblIdadeAnimal.TabIndex = 3;
             this.lblIdadeAnimal.Text = "Idade Animal";
-            this.lblIdadeAnimal.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -98,6 +97,7 @@
             this.btnCalculo.TabIndex = 5;
             this.btnCalculo.Text = "Calculo";
             this.btnCalculo.UseVisualStyleBackColor = true;
+            this.btnCalculo.Click += new System.EventHandler(this.btnCalculo_Click);
             // 
             // label1
             // 
@@ -115,7 +115,6 @@
             this.lblValorFinal.Size = new System.Drawing.Size(53, 13);
             this.lblValorFinal.TabIndex = 9;
             this.lblValorFinal.Text = "ValorFinal";
-            this.lblValorFinal.Click += new System.EventHandler(this.lblValorFinal_Click);
             // 
             // lblParcela
             // 
@@ -134,7 +133,6 @@
             this.lblDesconto.Size = new System.Drawing.Size(53, 13);
             this.lblDesconto.TabIndex = 7;
             this.lblDesconto.Text = "Desconto";
-            this.lblDesconto.Click += new System.EventHandler(this.lblpreco_Click);
             // 
             // lblNome
             // 
@@ -158,7 +156,6 @@
             this.txtIdadeAnimal.Name = "txtIdadeAnimal";
             this.txtIdadeAnimal.Size = new System.Drawing.Size(146, 20);
             this.txtIdadeAnimal.TabIndex = 13;
-            this.txtIdadeAnimal.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtQuantidade
             // 
@@ -196,7 +193,6 @@
             this.Controls.Add(this.lblNomePet);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
