@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PetsCity
@@ -35,6 +36,17 @@ namespace PetsCity
                 txtPrecoServico.Clear();
                 txtQuantidade.Clear();
                 txtIdadeAnimal .Clear();
+
+                if (brinde)
+                {
+                    lblStatus.Text = "PARABÉNS! você ganhou um Brinde";
+                    lblStatus.ForeColor = Color.Green;
+                }
+                else
+                {
+                    lblStatus.Text = "Compra padrão realizada com sucesso!";
+                    lblStatus.ForeColor = Color.Red;
+                }
 
             }
             catch(FormatException)

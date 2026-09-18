@@ -28,7 +28,7 @@ namespace PetsCity
         {
             double valorBruto = PrecoServ * Quantidade;
             double desconto = CalcularDesconto();
-            return valorBruto = desconto;
+            return valorBruto - desconto;
         }
         public double CalcularParcela()
         {

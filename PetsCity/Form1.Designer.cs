@@ -43,6 +43,7 @@
             this.txtIdadeAnimal = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtPrecoServico = new System.Windows.Forms.TextBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNomePet
@@ -84,7 +85,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 228);
+            this.label5.Location = new System.Drawing.Point(32, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 4;
@@ -110,7 +111,7 @@
             // lblValorFinal
             // 
             this.lblValorFinal.AutoSize = true;
-            this.lblValorFinal.Location = new System.Drawing.Point(30, 291);
+            this.lblValorFinal.Location = new System.Drawing.Point(26, 265);
             this.lblValorFinal.Name = "lblValorFinal";
             this.lblValorFinal.Size = new System.Drawing.Size(53, 13);
             this.lblValorFinal.TabIndex = 9;
@@ -119,7 +120,7 @@
             // lblParcela
             // 
             this.lblParcela.AutoSize = true;
-            this.lblParcela.Location = new System.Drawing.Point(36, 326);
+            this.lblParcela.Location = new System.Drawing.Point(32, 300);
             this.lblParcela.Name = "lblParcela";
             this.lblParcela.Size = new System.Drawing.Size(43, 13);
             this.lblParcela.TabIndex = 8;
@@ -128,7 +129,7 @@
             // lblDesconto
             // 
             this.lblDesconto.AutoSize = true;
-            this.lblDesconto.Location = new System.Drawing.Point(30, 262);
+            this.lblDesconto.Location = new System.Drawing.Point(26, 236);
             this.lblDesconto.Name = "lblDesconto";
             this.lblDesconto.Size = new System.Drawing.Size(53, 13);
             this.lblDesconto.TabIndex = 7;
@@ -137,7 +138,7 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(36, 224);
+            this.lblNome.Location = new System.Drawing.Point(32, 198);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 6;
@@ -171,11 +172,21 @@
             this.txtPrecoServico.Size = new System.Drawing.Size(146, 20);
             this.txtPrecoServico.TabIndex = 17;
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(32, 327);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.TabIndex = 18;
+            this.lblStatus.Text = "Status";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtPrecoServico);
             this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.txtIdadeAnimal);
@@ -215,6 +226,7 @@
         private System.Windows.Forms.TextBox txtIdadeAnimal;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.TextBox txtPrecoServico;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 
